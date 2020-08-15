@@ -17,7 +17,7 @@ export class NavBar{
     }
     @HostListener('window:resize') onresize(event){
         // console.log(event)
-        if(screen.availWidth<320){
+        if(screen.availWidth<500){
             this.computerscreenFlag=false
         }else{
             this.computerscreenFlag=true
