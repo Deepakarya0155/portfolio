@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component ,HostListener} from '@angular/core';
 import { trigger, transition, animate,style, keyframes } from '@angular/animations';
+import { browser } from 'protractor';
 
 
 @Component({
@@ -38,5 +39,7 @@ import { trigger, transition, animate,style, keyframes } from '@angular/animatio
 
 })
 export class AppComponent {
+ 
+
   title = 'FrontEnd';
 }
