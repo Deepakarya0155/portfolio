@@ -4,14 +4,14 @@
             <h1>Get <Strong>In Touch</Strong></h1>
         </div>
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-6" [ngClass]="true?'mobileF':''">
                 <h1>My Contact Details</h1>
                 <h3>EMAIL</h3>
-                <p>{{backend.contactme.email}}</p>
-                <h3>PHONE</h3>
-                <p>{{backend.contactme.mob}}</p>
-                <h3>Address</h3>
-                <p>{{backend.contactme.address}}</p>
+                <p [ngClass]="!backend.computerscreenFlag?'mobileF':''">{{backend.contactme.email}}</p>
+                <h3 [ngClass]="!backend.computerscreenFlag?'mobileF':''">PHONE</h3>
+                <p [ngClass]="!backend.computerscreenFlag?'mobileF':''">{{backend.contactme.mob}}</p>
+                <h3 [ngClass]="!backend.computerscreenFlag?'mobileF':''" >Address</h3>
+                <p [ngClass]="!backend.computerscreenFlag?'mobileF':''">{{backend.contactme.address}}</p>
             </div>
             <div class="col-md-6">
                 <div *ngFor="let i of backend.contactme.social">
