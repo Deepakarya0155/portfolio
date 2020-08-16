@@ -1,45 +1,19 @@
 import { Component ,HostListener} from '@angular/core';
 import { trigger, transition, animate,style, keyframes } from '@angular/animations';
 import { browser } from 'protractor';
-
+import {slideUp,shakeLeftRight} from './animations/animations'
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  animations:[
-    trigger("fadein",[
-      
-      transition(":enter",[
-        animate('.5s',keyframes([
-          style({
-            transform:'translateX(4px)'
-          }),
-          style({
-            transform:'translateX(-4px)'
-          }),
-          style({
-            transform:'translateX(4px)'
-          }),
-          style({
-            transform:'translateX(-4px)'
-          }),
-          style({
-            transform:'translateX(4px)'
-          }),
-          style({
-            transform:'translateX(-4px)'
-          }),
-        ]))
-      ])
-    ])
+  animations:[slideUp,shakeLeftRight
   ]
-
-  
-
 })
 export class AppComponent {
  
 
   title = 'FrontEnd';
+  
 }

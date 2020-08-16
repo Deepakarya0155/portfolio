@@ -1,23 +1,26 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule,compont } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {NavBar} from './navbar/navbar';
 import {MaterialModuleModule} from './material-module/material-module.module';
-import { HOMEComponent } from './home/home.component'
+import {HttpClientModule} from '@angular/common/http'
+import { Backend } from './servics/Backend';
+
 
 @NgModule({
   declarations: [
-    AppComponent,NavBar, HOMEComponent
+    AppComponent,NavBar, compont
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialModuleModule
+    MaterialModuleModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [Backend],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

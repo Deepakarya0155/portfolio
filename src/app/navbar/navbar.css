@@ -2,4 +2,24 @@
     position:fixed;
     text-align: center;
     width:100%;
+    padding:1% 0;
+    color:white;
+    letter-spacing: .2rem;
+    z-index: 1000;
+}
+button{
+    font-weight:100;
+    font-size:20px;
+}
+.navscroll{
+    position:fixed;
+    text-align: center;
+    width:100%;
+    background-color: #ffffff;
+    padding:1% 0;
+    letter-spacing: .2rem;
+    z-index: 1000;
+}
+.nav1{
+    position:fixed;
 }

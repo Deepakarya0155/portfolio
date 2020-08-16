@@ -1,0 +1,36 @@
+#resume{
+    padding-top:0;
+}
+#resume2{
+    background-color:#222222;
+    font-family: 'Roboto', sans-serif;
+    color:white;
+    font-weight: 200;
+    font-size:200%;
+    padding:9% 0;
+}
+
+.card1{
+    background-color:#333333;
+    padding:5%;
+    margin-top:10%;
+    border-radius:10px;
+}
+.datefont{
+    color:white;
+    font-size:14px;
+    font-weight: 500;
+
+}
+.font2{
+    color:#bac964;
+    font-size:80%;
+    padding-top:5%;
+}
+
+.font3{
+    color:#7f7f7f;
+    font-size:70%;
+    padding-top:2%;
+
+}

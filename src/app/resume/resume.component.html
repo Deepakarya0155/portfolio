@@ -1,0 +1,48 @@
+<div id="resume" >
+    <div id="resume2">
+        <div class="container">
+            <div style='text-align: center;'>
+                <p>My <strong>Resume</strong></p>
+            </div>  
+            <div class="container" style="padding-top:70px">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>Education</p>
+                        <div class="card1" *ngFor='let i of backend.study_data'>
+                            <div class="datefont">
+                                <mat-icon aria-hidden="false" aria-label="Example home icon" style="transform:translateY(2px);font-size:16px;">event</mat-icon> {{i.duration}}
+                            </div>
+                            <div class="font2">
+                                {{i.Heading}}
+                            </div>
+                            <div class="font3">
+                                {{i.school}}
+                            </div>
+                            <div class="font3">
+                                {{i.city}}
+                            </div>
+                         </div>
+                    </div>
+                    <div class="col-md-6">
+                        <p>Experience</p>
+                        <div class="card1" *ngFor='let i of backend.exp_data'>
+                            <div class="datefont">
+                                <mat-icon aria-hidden="false" aria-label="Example home icon" style="transform:translateY(2px);font-size:16px;">event</mat-icon> {{i.duration}}
+                            </div>
+                            <div class="font2">
+                                {{i.company}}
+                            </div>
+                            <div class="font3">
+                                {{i.discription}}
+                            </div>
+                            <div class="font3">
+                                {{i.tech}}
+                            </div>
+                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+<div>

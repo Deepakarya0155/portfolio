@@ -1,21 +1,28 @@
-<div class='nav' *ngIf='computerscreenFlag'>
-        <button mat-button >HOME</button>
-        <button mat-button >PORTFOLIO</button>
-        <button mat-button >RESUME</button>
-        <button mat-button >ABOUT</button>
-        <button mat-button >CONTACT</button>
+<div [ngClass]="scrollFlag?'navscroll':'nav'" *ngIf='computerscreenFlag' >
+    <button mat-button @slideLeft (click)='goHome()'>HOME</button>
+    <button mat-button @slideRight  >PORTFOLIO</button>
+    <button mat-button @shakeLeftRight (click)='goResume()'>RESUME</button>
+    <button mat-button @slideDown>ABOUT</button>
+    <button mat-button @slideUp>CONTACT</button>
 </div>
-<button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu" *ngIf='!computerscreenFlag'>
+<button mat-icon-button class='nav1' [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu"
+    *ngIf='!computerscreenFlag'>
     <mat-icon>more_vert</mat-icon>
-  </button>
-  <mat-menu #menu="matMenu">
+</button>
+<mat-menu #menu="matMenu">
+    <button mat-menu-item (click)='goHome()'>
+        <span>HOME</span>
+    </button>
+    <button mat-menu-item >
+        <span>PORTFOLIO</span>
+    </button>
     <button mat-menu-item>
-      <span>Redial</span>
-    </button>
-    <button mat-menu-item disabled>
-      <span>Check voice mail</span>
+        <span (click)='goResume()'>RESUME</span>
     </button>
     <button mat-menu-item>
-      <span>Disable alerts</span>
+        <span>ABOUT</span>
     </button>
-  </mat-menu>
+    <button mat-menu-item>
+        <span>CONTACT</span>
+    </button>
+</mat-menu>
