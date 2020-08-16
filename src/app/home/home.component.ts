@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Backend } from '../servics/Backend';
 
 @Component({
   selector: 'app-home',
@@ -9,7 +10,7 @@ export class HOMEComponent implements OnInit {
 
   name="Deepak Arya"
 
-  constructor() { }
+  constructor(public backend:Backend) { }
 
   ngOnInit(): void {
     

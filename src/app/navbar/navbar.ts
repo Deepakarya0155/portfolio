@@ -1,6 +1,7 @@
 import {Component,HostListener} from '@angular/core'
 import {Router} from '@angular/router'
 import {slideRight,slideLeft,slideDown,slideUp,shakeLeftRight} from '../animations/animations'
+import { Backend } from '../servics/Backend';
 
 @Component({
     selector:'app-navbar',
@@ -17,11 +18,13 @@ import {slideRight,slideLeft,slideDown,slideUp,shakeLeftRight} from '../animatio
 export class NavBar{
     computerscreenFlag=true;
     scrollFlag=false;
-    constructor(private route:Router){
+    constructor(private route:Router,private backend:Backend){
         if(screen.availWidth<720){
             this.computerscreenFlag=false
+            this.backend.computerscreenFlag=false;
         }else{
             this.computerscreenFlag=true
+            this.backend.computerscreenFlag=true;
         }
     }
 
@@ -36,8 +39,10 @@ export class NavBar{
         // console.log(event)
         if(screen.availWidth<720){
             this.computerscreenFlag=false
+            this.backend.computerscreenFlag=false;
         }else{
             this.computerscreenFlag=true
+            this.backend.computerscreenFlag=true;
         }
     }
 

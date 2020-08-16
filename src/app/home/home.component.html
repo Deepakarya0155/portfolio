@@ -1,10 +1,11 @@
-<div id="HOME">
-    <div id="HOME2">
-        <div id="Home_text">
-            <p>Hello, I'm</p><br><br><br>
-            <p><strong>{{name}}</strong></p><br><br><br>
-            <p id="Home_text2">and this is My Resume</p>
+<div id="HOME" class="container">
+    <div id="HOME2" class='row'>
+        <div [ngClass]="backend.computerscreenFlag?'col-md-12 Home_text':'col-md-12 Home_textm'">
+            <p>Hello, I'm</p>
+            <span [hidden]='!backend.computerscreenFlag'><br><br><br></span>
+            <p><strong>{{name}}</strong>
+            <span [hidden]='!backend.computerscreenFlag'><br><br><br></span>
+            <p class="Home_text2">and this is My Resume</p>
         </div>
-        
     </div>
 </div>

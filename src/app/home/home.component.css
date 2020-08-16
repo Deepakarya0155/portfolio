@@ -1,23 +1,31 @@
 #HOME{
     background-image:url('../img/images/image_1.jpg');
-    height:700px;
+    
     background-repeat: no-repeat;
     width:100%;
     background-size: 100%;
 }
 #HOME2{
     background-color:rgb(0,0,0,.5);
-    height:700px;
+    background-size: 100%;
 }
-#Home_text{
+.Home_text{
     text-align:center;
-    padding-top:25%;
     font-family: 'Roboto', sans-serif;
     font-weight: 200;
-    font-size:500%;
+    padding:25%;
+    font-size:5vw;
     color:white;
+    height:100%;
 }
-#Home_text2{
-    font-size:20px;
+.Home_text2{
+    font-size:1.5vw;
     letter-spacing: .2rem
+}
+.Home_textm{
+    text-align:center;
+    font-family: 'Roboto', sans-serif;
+    padding:20%;
+    color:white;
+    height:100%;
 }

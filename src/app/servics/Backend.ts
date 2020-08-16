@@ -1,10 +1,11 @@
-import {Injectable} from '@angular/core'
+import {Injectable, HostListener} from '@angular/core'
 import { HttpClient } from '@angular/common/http';
 
 @Injectable()
 export class Backend{
     study_data:any[];
     exp_data:any[];
+    computerscreenFlag=true;
     constructor(private http:HttpClient){
         this.loadStudyData()
         this.loadExpData();
@@ -19,4 +20,6 @@ export class Backend{
             this.exp_data=res
         },error=>console.log(error)) 
     }
+
+    
 }
