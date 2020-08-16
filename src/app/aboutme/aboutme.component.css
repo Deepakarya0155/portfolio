@@ -1,0 +1,29 @@
+#aboutme{
+    background-color:#222222;
+    padding:9% 0;
+}
+.aboutmeImg{
+    width:100%;
+    border-radius: 10px;
+}
+.aboutmeText{
+   
+    font-family: 'Roboto', sans-serif;
+    color:white;
+    font-weight:50;
+    padding:5%;
+}
+.aboutmeText2{
+    color:#7f7f7f;
+    font-size:1.5vw;
+    word-spacing: 2px;
+    padding-top:2%;
+    
+}
+p{
+    margin-bottom: 5%;
+}
+.btn2{
+    margin-right:20px;
+
+}

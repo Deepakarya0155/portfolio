@@ -9,11 +9,15 @@ import {HttpClientModule} from '@angular/common/http'
 import { Backend } from './servics/Backend';
 
 
+
+
+
 @NgModule({
   declarations: [
     AppComponent,NavBar, compont
   ],
   imports: [
+    
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,

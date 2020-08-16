@@ -1,9 +1,9 @@
 <div [ngClass]="scrollFlag?'navscroll':'nav'" *ngIf='computerscreenFlag' >
     <button mat-button @slideLeft (click)='goHome()'>HOME</button>
-    <button mat-button @slideRight  >PORTFOLIO</button>
+    <button mat-button @slideRight (click)='goPortfolio()' >PORTFOLIO</button>
     <button mat-button @shakeLeftRight (click)='goResume()'>RESUME</button>
-    <button mat-button @slideDown>ABOUT</button>
-    <button mat-button @slideUp>CONTACT</button>
+    <button mat-button @slideDown (click)='goAboutMe()'>ABOUT</button>
+    <button mat-button @slideUp (click)='gocontactme()'>CONTACT</button>
 </div>
 <button mat-icon-button class='nav1' [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu"
     *ngIf='!computerscreenFlag'>
@@ -13,16 +13,16 @@
     <button mat-menu-item (click)='goHome()'>
         <span>HOME</span>
     </button>
-    <button mat-menu-item >
+    <button mat-menu-item (click)='goPortfolio()'>
         <span>PORTFOLIO</span>
     </button>
     <button mat-menu-item>
         <span (click)='goResume()'>RESUME</span>
     </button>
-    <button mat-menu-item>
+    <button mat-menu-item (click)='goAboutMe()'>
         <span>ABOUT</span>
     </button>
-    <button mat-menu-item>
+    <button mat-menu-item (click)='gocontactme()'>
         <span>CONTACT</span>
     </button>
 </mat-menu>

@@ -52,4 +52,13 @@ export class NavBar{
     goResume(){
         this.route.navigate(['resume'])
     }
-}
+    goAboutMe(){
+        this.route.navigate(['aboutme'])
+    }
+    gocontactme(){
+        this.route.navigate(['contactme'])
+    }
+    goPortfolio(){
+        this.route.navigate(['portfolio'])
+    }
+}   

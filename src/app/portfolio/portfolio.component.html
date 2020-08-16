@@ -1,0 +1,20 @@
+<div class='contactme '>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4" *ngFor='let i of backend.portfolio_data'>
+                <div class="card" style="background-color:#333333;border-radius: 20px;padding-bottom: 10px;">
+                    <iframe width="100%" height="315" style="border-radius: 20px 20px 0 0" [src]="safeurl(i.videolink)" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <div class="card-body" style="padding-top:10px;text-align: center;">
+                        
+                        <a [href]="safeurl(i.projectlink)" class="btn btn-primary" *ngIf="i.projectlink!=''"> Project Link</a>
+                        <a class="btn btn-primary" *ngIf="i.projectlink==''"> No Project link </a>
+                        
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>

@@ -22,4 +22,6 @@ button{
 }
 .nav1{
     position:fixed;
+    background-color: #ffffff;
+    z-index: 1000;
 }

@@ -1,0 +1,32 @@
+#contactme{
+    background-color:#222222;
+    padding:9% 0;
+}
+.aboutmeImg{
+    width:100%;
+    border-radius: 10px;
+}
+.aboutmeText{
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    color:white;
+    font-weight:50;
+    padding:5%;
+}
+h1{
+    color:white;
+}
+h3{
+    color:#2c3e48;
+}
+
+p{
+    color:#7f7f7f;
+    font-size:1.5vw;
+    word-spacing: 2px;
+}
+
+.btn2{
+    margin-right:20px;
+
+}

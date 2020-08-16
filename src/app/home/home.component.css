@@ -1,5 +1,5 @@
 #HOME{
-    background-image:url('../img/images/image_1.jpg');
+    background-image:url('../../assets/image_1.jpg');
     
     background-repeat: no-repeat;
     width:100%;
@@ -26,6 +26,7 @@
     text-align:center;
     font-family: 'Roboto', sans-serif;
     padding:20%;
+    font-size:5vw;
     color:white;
     height:100%;
 }

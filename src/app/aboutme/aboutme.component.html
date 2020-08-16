@@ -1,0 +1,20 @@
+<div id="aboutme">
+    <div class="container">
+        
+        <div class="row">
+            <div class="col-md-6 ">
+                <img class='aboutmeImg' src="./assets/image_1.jpg">
+            </div>
+            <div class="col-md-6 aboutmeText">
+                <h1>About <Strong>Me</Strong></h1>
+                <div  class='aboutmeText2' *ngFor='let i of backend.aboutme_data '>
+                   <p> {{i.p1}}</p>
+                    <p>{{i.p2}}</p>
+                    <a class="btn btn-danger btn2" routerLink='/contactme'>Hire Me </a>
+                    <a class="btn btn-success btn2" routerLink='/contactme'>Contact me </a>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
