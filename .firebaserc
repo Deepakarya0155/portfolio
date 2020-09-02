@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "portfolio-80599": {
+      "hosting": {
+        "FrontEnd": [
+          "portfolio-80599"
+        ]
+      }
+    }
+  }
+}

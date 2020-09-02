@@ -7,9 +7,10 @@ import {NavBar} from './navbar/navbar';
 import {MaterialModuleModule} from './material-module/material-module.module';
 import {HttpClientModule} from '@angular/common/http'
 import { Backend } from './servics/Backend';
-
-
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {AngularFireModule} from '@angular/fire'
+import {AngularFireDatabaseModule} from '@angular/fire/database'
+import { environment } from 'src/environments/environment';
 
 
 @NgModule({
@@ -22,7 +23,13 @@ import { Backend } from './servics/Backend';
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModuleModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireDatabaseModule
+
+    
   ],
   providers: [Backend],
   bootstrap: [AppComponent]

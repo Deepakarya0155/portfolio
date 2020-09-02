@@ -4,13 +4,17 @@ import {MatMenuModule} from '@angular/material/menu';
 import {MatIconModule} from '@angular/material/icon';
 import {MatCardModule} from '@angular/material/card';
 import {MatTooltipModule} from '@angular/material/tooltip';
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
 
 
 const material_comm=[
   MatButtonModule,
   MatMenuModule,
   MatIconModule,
-  MatCardModule
+  MatCardModule,
+  MatInputModule,
+  MatFormFieldModule
 ]
 
 @NgModule({

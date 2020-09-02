@@ -1,5 +1,7 @@
 import {Injectable, HostListener} from '@angular/core'
 import { HttpClient } from '@angular/common/http';
+import {AngularFireDatabase} from '@angular/fire/database'
+
 
 @Injectable()
 export class Backend{
@@ -9,7 +11,7 @@ export class Backend{
     portfolio_data:any[];
     contactme:any;
     computerscreenFlag=true;
-    constructor(private http:HttpClient){
+    constructor(private http:HttpClient,private firedb:AngularFireDatabase){
         this.loadStudyData()
         this.loadExpData();
         this.loadaboutme();
@@ -43,5 +45,10 @@ export class Backend{
             
         },error=>console.log(error)) 
     }
+
+    getFeedBackLink(){
+       return this.firedb.list("/feedback")
+    }
+    
 
 }

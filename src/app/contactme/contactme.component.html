@@ -4,6 +4,38 @@
             <h1>Get <Strong>In Touch</Strong></h1>
         </div>
         <div class="row">
+            <div class="col-md-6" >
+                <h1>GET IN TOUCH</h1>
+                <form [formGroup]="qform" (ngSubmit)="submit(qform.value)">
+                    <mat-form-field appearance="outline" style="width:80%">
+                        <mat-label>Name</mat-label>
+                        <input  matInput placeholder="Name" formControlName="name" style="color:#7f7f7f;">
+                        <mat-hint>Hint : Deepak</mat-hint>
+                    </mat-form-field>
+                    <mat-form-field appearance="outline" style="width:80%">
+                        <mat-label>Email</mat-label>
+                        <input  matInput placeholder="Email" formControlName="email" style="color:#7f7f7f;">
+                        <mat-hint>Hint : deepakarya0155@gmail.com</mat-hint>
+                    </mat-form-field>
+                    <mat-form-field appearance="outline" style="width:80%">
+                        <mat-label>Mobile </mat-label>
+                        <input  matInput placeholder="Mobile" formControlName="phone" style="color:#7f7f7f;">
+                        <mat-hint>Hint : 9988887783</mat-hint>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline" style="width:80%">
+                        <mat-label>Question</mat-label>
+                        <textarea matInput formControlName="comment" style="color:#7f7f7f;"></textarea>
+                        <mat-hint>Hint : I want to know 
+                            
+                        </mat-hint>
+                    </mat-form-field>
+                    <button style="width:80%;margin-bottom:5%" type="submit" mat-raised-button
+                    [disabled]="qform.invalid"
+                    >Submit</button>
+                    
+                    </form>
+            </div>
             <div class="col-md-6" [ngClass]="true?'mobileF':''">
                 <h1>My Contact Details</h1>
                 <h3>EMAIL</h3>
@@ -13,7 +45,7 @@
                 <h3 [ngClass]="!backend.computerscreenFlag?'mobileF':''" >Address</h3>
                 <p [ngClass]="!backend.computerscreenFlag?'mobileF':''">{{backend.contactme.address}}</p>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-12">
                 <div *ngFor="let i of backend.contactme.social">
                     <a class="btn btn-primary" style="width:100%;border-radius: 10px;" target="_black" [href]='i.link'>{{i.name}}</a><br><br>
                </div>
