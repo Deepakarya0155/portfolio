@@ -28,8 +28,9 @@ export class ContactmeComponent implements OnInit,OnDestroy {
 
   submit(qform){
     // console.log(qform)
-    this.backend.getFeedBackLink().push(qform).then(res=>{
-      alert("success full")
+    this.backend.getFeedBackLink().push(qform.value).then(res=>{
+      this.backend.openSnackBar(5,'Your query will \n response soon');
+      this.qform.reset()
     }).catch(error=>console.log(error))
   }
 

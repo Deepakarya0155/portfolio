@@ -1,6 +1,8 @@
 import {Injectable, HostListener} from '@angular/core'
 import { HttpClient } from '@angular/common/http';
 import {AngularFireDatabase} from '@angular/fire/database'
+import {MatSnackBar} from '@angular/material/snack-bar';
+import { snkComp } from './snkComp';
 
 
 @Injectable()
@@ -11,7 +13,7 @@ export class Backend{
     portfolio_data:any[];
     contactme:any;
     computerscreenFlag=true;
-    constructor(private http:HttpClient,private firedb:AngularFireDatabase){
+    constructor(private http:HttpClient,private firedb:AngularFireDatabase,private snk:MatSnackBar){
         this.loadStudyData()
         this.loadExpData();
         this.loadaboutme();
@@ -50,5 +52,10 @@ export class Backend{
        return this.firedb.list("/feedback")
     }
     
-
+    openSnackBar(dur,msg) {
+        this.snk.openFromComponent(snkComp, {
+          duration: dur * 1000,
+          data:msg
+        });
+    }
 }

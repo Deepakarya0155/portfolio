@@ -11,11 +11,12 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {AngularFireModule} from '@angular/fire'
 import {AngularFireDatabaseModule} from '@angular/fire/database'
 import { environment } from 'src/environments/environment';
+import { snkComp } from './servics/snkComp';
 
 
 @NgModule({
   declarations: [
-    AppComponent,NavBar, compont
+    AppComponent,NavBar, compont,snkComp
   ],
   imports: [
     
