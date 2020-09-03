@@ -67,4 +67,8 @@ export class NavBar{
     goadmin(){
         this.route.navigate(['admin'])
     }
+    logout(){
+        this.backend.currentuser=null;
+        this.route.navigate(['/'])
+    }
 }   

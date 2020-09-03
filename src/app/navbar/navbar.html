@@ -6,7 +6,7 @@
     <button mat-button @slideUp (click)='gocontactme()'>CONTACT</button>
     <button mat-button (click)='goLogin()' *ngIf="backend.currentuser!='admin'">LOGIN</button>
     <button mat-button (click)='goadmin()' *ngIf="backend.currentuser=='admin'">Admin</button>
-    <button mat-button (click)='backend.currentuser=null' *ngIf="backend.currentuser=='admin'">Logout</button>
+    <button mat-button (click)='logout()' *ngIf="backend.currentuser=='admin'">Logout</button>
 </div>
 <button mat-icon-button class='nav1' [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu"
     *ngIf='!computerscreenFlag'>
@@ -30,6 +30,6 @@
     </button>
     <button mat-menu-item (click)='goLogin()' *ngIf="backend.currentuser!='admin'"><span>LOGIN</span></button>
     <button mat-menu-item (click)='goadmin()' *ngIf="backend.currentuser=='admin'"><span>ADMIN</span></button>
-    <button mat-menu-item (click)='backend.currentuser=null' *ngIf="backend.currentuser=='admin'"><span>LOGOUT</span></button>
+    <button mat-menu-item (click)='logout()' *ngIf="backend.currentuser=='admin'"><span>LOGOUT</span></button>
 
 </mat-menu>
