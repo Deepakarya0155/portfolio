@@ -7,6 +7,7 @@ import { snkComp } from './snkComp';
 
 @Injectable()
 export class Backend{
+    currentuser;
     study_data:any[];
     exp_data:any[];
     aboutme_data:any[];
@@ -52,10 +53,17 @@ export class Backend{
        return this.firedb.list("/feedback")
     }
     
+    getAdminDetail(){
+        return this.firedb.object("/login/1")
+    }
+    
     openSnackBar(dur,msg) {
         this.snk.openFromComponent(snkComp, {
           duration: dur * 1000,
           data:msg
         });
+    }
+    getDbObject(){
+        return this.firedb;
     }
 }

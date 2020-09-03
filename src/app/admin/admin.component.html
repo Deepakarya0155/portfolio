@@ -1,0 +1,9 @@
+<div style="padding-top:9%;color:white">
+    <button mat-button [matMenuTriggerFor]="adminM">Menu</button>
+    <mat-menu #adminM="matMenu">
+        <button mat-menu-item (click)="route.navigate(['/admin/feedback'])">feedbacks</button>
+    </mat-menu>
+</div>
+<div class="container">
+<router-outlet></router-outlet>
+</div>

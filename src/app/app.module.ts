@@ -12,6 +12,10 @@ import {AngularFireModule} from '@angular/fire'
 import {AngularFireDatabaseModule} from '@angular/fire/database'
 import { environment } from 'src/environments/environment';
 import { snkComp } from './servics/snkComp';
+import { loginGuard } from './servics/authGard';
+
+
+
 
 
 @NgModule({
@@ -32,7 +36,7 @@ import { snkComp } from './servics/snkComp';
 
     
   ],
-  providers: [Backend],
+  providers: [Backend,loginGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

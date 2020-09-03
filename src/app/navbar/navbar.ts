@@ -18,7 +18,7 @@ import { Backend } from '../servics/Backend';
 export class NavBar{
     computerscreenFlag=true;
     scrollFlag=false;
-    constructor(private route:Router,private backend:Backend){
+    constructor(private route:Router,public backend:Backend){
         if(screen.availWidth<720){
             this.computerscreenFlag=false
             this.backend.computerscreenFlag=false;
@@ -60,5 +60,11 @@ export class NavBar{
     }
     goPortfolio(){
         this.route.navigate(['portfolio'])
+    }
+    goLogin(){
+        this.route.navigate(['login'])
+    }
+    goadmin(){
+        this.route.navigate(['admin'])
     }
 }   
