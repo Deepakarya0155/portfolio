@@ -7,9 +7,9 @@
             </div>
             <div class="col-md-6 aboutmeText">
                 <h1>About <Strong>Me</Strong></h1>
-                <div  class='aboutmeText2' *ngFor='let i of backend.aboutme_data '>
-                   <p [ngClass]="!backend.computerscreenFlag?'mobileF':''"> {{i.p1}}</p>
-                    <p [ngClass]="!backend.computerscreenFlag?'mobileF':''">{{i.p2}}</p>
+                <div  class='aboutmeText2' *ngIf='backend.aboutme_data '>
+                   <p [ngClass]="!backend.computerscreenFlag?'mobileF':''"> {{backend.aboutme_data.p1}}</p>
+                    <p [ngClass]="!backend.computerscreenFlag?'mobileF':''">{{backend.aboutme_data.p2}}</p>
                     <a class="btn btn-danger btn2" routerLink='/contactme'>Hire Me </a>
                     <a class="btn btn-success btn2" routerLink='/contactme'>Contact me </a>
                 </div>

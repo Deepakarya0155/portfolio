@@ -10,9 +10,7 @@ import { Observable } from 'rxjs';
 })
 export class ContactmeComponent implements OnInit,OnDestroy {
   subscription:Observable<any>;
-  constructor(public backend:Backend) {
-    // this.subscription=backend.getFeedBackLink().valueChanges();
-  }
+  constructor(public backend:Backend) {}
 
   qform=new FormGroup({
     name:new FormControl("",[Validators.required]),
@@ -34,7 +32,5 @@ export class ContactmeComponent implements OnInit,OnDestroy {
     }).catch(error=>console.log(error))
   }
 
-  ngOnDestroy(){
-    // this.subscription.subscribe();
-  }
+  ngOnDestroy(){}
 }

@@ -10,16 +10,31 @@ export class Backend{
     currentuser;
     study_data:any[];
     exp_data:any[];
-    aboutme_data:any[];
+    aboutme_data:any;
     portfolio_data:any[];
     contactme:any;
     computerscreenFlag=true;
+    socialmedia:any[]=[];
     constructor(private http:HttpClient,private firedb:AngularFireDatabase,private snk:MatSnackBar){
         this.loadStudyData()
         this.loadExpData();
-        this.loadaboutme();
-        this.loadcontactme();
+        // this.loadaboutme();
+        // this.loadcontactme();
         this.loadportfolio();
+        firedb.object("/contact").valueChanges().subscribe(rs=>{
+            this.contactme=rs
+        })
+        firedb.object("/social").valueChanges().subscribe((rs:any)=>{
+            for(let i of rs){
+                if(i!=undefined){
+                    this.socialmedia.push(i);
+                }
+            }
+        });
+        
+        firedb.object("/about").valueChanges().subscribe((rs:any)=>{
+            this.aboutme_data=rs;
+        })
     }
     loadStudyData(){
         this.http.get('./assets/study.json').subscribe((res:any)=>{
@@ -66,4 +81,5 @@ export class Backend{
     getDbObject(){
         return this.firedb;
     }
+   
 }
